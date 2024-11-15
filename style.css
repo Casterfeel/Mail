@@ -1,0 +1,503 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('/fonts/MullerMedium.woff') format('truetype');
+}
+
+@media(max-width: 320px) {
+    .entry_block {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+    }
+    .entry_head {
+        text-align: center;
+
+    }
+    .header_info {
+        line-height: 10px;
+    }
+    .par_info {
+        text-align: center;
+    }
+    .top_blocks {
+        display: flex;
+        flex-direction: column;
+    }
+    .top_blocks p {
+        text-align: left;
+    }
+    .mid_blocks p {
+        text-align: left;
+    }
+    .bot_blocks p {
+        text-align: left;
+    }
+    .bot_blocks {
+        display: flex;
+        flex-direction: column;
+    }
+    .mid_blocks {
+        display: flex;
+        flex-direction: column;
+    }
+    .top_block-1 {
+        max-width: 220px
+    }
+    .top_block-2 {
+        max-width: 220px
+    }
+    .bot_block-2 {
+        max-width: 220px
+    }
+    .mid_block-1 {
+        max-width: 220px
+    }
+    .mid_block-2 {
+        max-width: 220px
+    }
+    .bot_block-1 {
+        max-width: 220px
+    }
+    .final_header {
+        line-height: 26px !important;
+        font-size: 14px !important;
+
+    }
+    .inputs {
+        width: 120px !important;
+        display: flex;
+    }
+    .agree_block {
+        margin-left: 400px;
+    }
+    .checkbox_block {
+        max-width: 250px;
+    }
+    .price_btn {
+        width: 160px !important;
+    }
+}
+@media(max-width: 768px) {
+    .entry_block {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 160px;
+    }
+    .entry_head {
+        text-align: center;
+
+    }
+    .header_info {
+        
+        font-size: 16px !important;
+
+    }
+    .par_info {
+        text-align: center;
+
+    }
+    .blocks {
+        margin-left: 220px !important;
+    }
+    .top_blocks p {
+        text-align: left;
+    }
+    .mid_blocks p {
+        text-align: left;
+    }
+    .bot_blocks p {
+        text-align: left;
+    }
+
+    .top_block-1 {
+        max-width: 220px
+    }
+    .top_block-2 {
+        max-width: 220px
+    }
+    .bot_block-2 {
+        max-width: 220px
+    }
+    .mid_block-1 {
+        max-width: 220px
+    }
+    .mid_block-2 {
+        max-width: 220px
+    }
+    .bot_block-1 {
+        max-width: 220px
+    }
+    .final_header {
+        line-height: 26px !important;
+        font-size: 14px !important;
+
+    }
+    .inputs {
+        width: 420px !important;
+        display: flex;
+    }
+    .agree_block {
+        margin-left: 60px;
+        line-height: 12px !important;
+    }
+    .checkbox_block {
+        max-width: 450px;
+    }
+    .price_btn {
+        width: 200px !important;
+    }
+}
+
+body {
+    font-family: 'Muller';
+    src: url('/fonts/MullerMedium.woff');
+    height: 100%;
+}
+
+
+.main {
+    min-height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+.row {
+    max-width: 820px;
+    max-height: 565px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('./images/left.png'), url('./images/top\ tight.png'), url('./images/bot\ right.png');
+    background-repeat: no-repeat;
+    background-position: left, top right, bottom right;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.header_info {
+    color: #283967;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 31px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.par_info {
+    color: #283967;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 31px;
+    text-align: left !important;
+}
+
+.top_block-1 {
+    display: flex;
+    width: 330px;
+    max-height: 78px;
+    border-radius: 15px;
+    border: 1px solid #283967;
+    background-color: #fff;
+    align-items: center;
+    border: 1px solid #283967;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    
+}
+
+.blocks {
+    flex-grow: 1;
+    margin-left: 71px;
+    max-width: 677px;
+    display: block;
+    min-height: 500px;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.top_blocks {
+    display: flex;
+    gap: 16px;
+}
+
+.check_par {
+    text-align: right;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #283967;
+}
+
+
+.top_block-2 {
+    display: flex;
+    width: 330px;
+    height: 78px;
+    border-radius: 15px;
+    border: 1px solid #283967;
+    align-items: center;
+    background-color: #fff;
+}
+
+.top_blocks input {
+    margin-left: 20px;
+}
+
+
+
+.mid_blocks, .bot_blocks {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.mid_blocks input {
+    margin-left: 20px;
+}
+
+.bot_blocks input {
+    margin-left: 20px;
+}
+
+.mid_block-1, .bot_block-1 {
+    display: flex;
+    width: 330px;
+    height: 78px;
+    border-radius: 15px;
+    border: 1px solid #283967;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.mid_block-2, .bot_block-2 {
+    display: flex;
+    width: 330px;
+    height: 78px;
+    border-radius: 15px;
+    border: 1px solid #283967;
+    align-items: center;
+    border: 1px solid #283967;
+}
+
+.quiz-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 268px;
+    height: 100%;
+}
+
+.bot_fields {
+    padding-bottom: 50px;
+    width: 100%;         
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+
+}
+
+.bot_left-field {
+    width: 130px;
+    height: 40px;
+    border: 1px solid #45BC73;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #283967;
+    background-color: #fff;
+}
+
+.next_btn {
+     width: 130px;
+     height: 40px;
+     border: none;
+     border-radius: 40px;
+     background-color: #45BC73;
+     color: #fff;
+     font-size: 15px;
+     font-weight: 500;
+     line-height: 19px;
+     box-shadow: 0px 5px 16px 4px rgba(66, 196, 157, 0.2);
+     cursor: pointer;
+}
+
+/* Стилизуем все инпуты (radio и checkbox) одинаково */
+input[type="radio"], input[type="checkbox"] {
+    appearance: none; /* Убираем стандартное оформление */
+    -webkit-appearance: none; /* Убираем стандартное оформление в Safari */
+    -moz-appearance: none; /* Убираем стандартное оформление в Firefox */
+    width: 28px; /* Устанавливаем ширину */
+    height: 28px; /* Устанавливаем высоту */
+    border: 2px solid #283967; /* Белая окантовка */
+    border-radius: 50%; /* Радиус для округлости (для radio) */
+    background-color: white; /* Белый фон */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Стиль при активном (выбранном) состоянии */
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background-color: white; /* Белый фон */
+    border-color: #283967; /* Оставляем рамку #283967 */
+}
+
+/* Для отображения зеленого круга внутри при активном состоянии */
+input[type="radio"]:checked::after, input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 3px; /* Центрируем круг внутри */
+    left: 3px; /* Центрируем круг внутри */
+    width: 15px; /* Размер внутреннего круга */
+    height: 15px; /* Размер внутреннего круга */
+    background-color: #28a745; /* Зеленый цвет */
+    border-radius: 50%; /* Круглая форма */
+    border: 2px solid white; /* Белая окантовка вокруг зеленого круга */
+}
+
+/* Исключаем стили для чекбокса с классом .no-style */
+input[type="checkbox"].no-style {
+    appearance: auto; /* Включаем стандартное оформление для этого чекбокса */
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    border-radius: 0;
+    height: 20px;
+    width: 20px;
+    /* Оставляем стандартный стиль (круглый или квадратный в зависимости от браузера) */
+}
+
+/* Исключаем стили активного состояния для чекбокса с классом .no-style */
+input[type="checkbox"].no-style:checked {
+    background-color: initial; /* Стандартное оформление для активного состояния */
+    border-color: initial; /* Стандартная рамка */
+}
+
+input[type="checkbox"].no-style:checked::after {
+    content: none; /* Убираем внутренний круг при активном состоянии */
+}
+  
+
+    .hidden {
+        display: none !important;
+    }
+
+.checkbox_block {
+    display: flex;
+    align-items:center;
+    gap: 16px;
+}
+
+
+.final_header {
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 42px;
+    color: #283967;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.final_par {
+    color:#1E1E1E ;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.agree_par {
+    color: #828282;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    width: 607px;
+}
+
+.price_btn {
+    width: 257px;
+    height: 54px;
+    background-color: #45BC73;
+    color: #fff;
+    border-radius: 45px;
+    border: none;
+    box-shadow: 0px 5px 16px 4px rgba(66, 196, 157, 0.2);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agree_block {
+    color: #283967;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 25px;
+    margin-right: 400px;;
+}
+
+
+
+.inputs {
+    width: 607px;
+    height: 50px;
+    border: 1px solid #929292;
+    border-radius: 5px;
+    padding-left: 21px;
+    margin: 0 auto;
+}
+
+
+
+.entry_btn {
+    height: 54px;
+    width: 161px;
+    border-radius: 45px;
+    color: #fff;
+    border: none;
+    background-color: #45BC73;
+    box-shadow: 0px 5px 16px 4px rgba(66, 196, 96, 0.2);
+    cursor: pointer;
+}
+
+.entry_head {
+    color: #283967;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 27px;
+    width: 259px;
+}
+
+.entry_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.inputs_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

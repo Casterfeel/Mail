@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-lg-9">
+            <div class="entry_block" id="entryBlock">
+              <h1 class="entry_head">Подобрать пакет документов</h1>
+              <button class="entry_btn" id="startQuizBtn">Подобрать</button>
+           </div>
+            <div class="blocks">
+              <div class="quiz-page hidden" id="page-1">
+                <h1 style="text-align: center" class="header_info">
+                  Ответьте на 4 вопроса и получите стоимость разработки <br />
+                  пакета документов по персональным данным
+                </h1>
+                <p style="text-align: center" class="par_info">
+                  1. Выберете вашу организационно правовую форму:
+                </p>
+                <div class="top_blocks">
+                  <div class="top_block-1">
+                    <input type="radio" name="question1" value="1" />
+                    <p class="check_par">Юридическое лицо</p>
+                  </div>
+                  <div class="top_block-2">
+                    <input type="radio" name="question1" value="2" />
+                    <p class="check_par">Муниципальный орган</p>
+                  </div>
+                </div>
+                <div class="mid_blocks">
+                  <div class="mid_block-1">
+                    <input type="radio" name="question1" value="3" />
+                    <p class="check_par">ИП</p>
+                  </div>
+                  <div class="mid_block-2">
+                    <input type="radio" name="question1" value="4" />
+                    <p class="check_par">Физическое лицо</p>
+                  </div>
+                </div>
+                <div class="bot_blocks">
+                  <div class="bot_block-1">
+                    <input type="radio" name="question1" value="5" />
+                    <p class="check_par">Государственный орган</p>
+                  </div>
+                  <div class="bot_block-2">
+                    <input type="radio" name="question1" value="6" />
+                    <p class="check_par">Иностранный гражданин</p>
+                  </div>
+                </div>
+                <div class="bot_fields">
+                  <div class="bot_left-field">Вопрос 1 из 4</div>
+                  <button class="next_btn" onclick="nextPage(1)">Далее</button>
+                </div>
+              </div>
+              <div class="quiz-page hidden" id="page-2">
+                <h1 style="text-align: center" class="header_info">
+                  Ответьте на 4 вопроса и получите стоимость разработки <br />
+                  пакета документов по персональным данным
+                </h1>
+                <p style="text-align: center" class="par_info">
+                  2. Какие категории персональных данных вы обрабатываете:
+                </p>
+                <div class="top_blocks">
+                  <div class="top_block-1">
+                    <input type="checkbox" name="question2" value="1" />
+                    <p class="check_par">Биометрические</p>
+                  </div>
+                  <div class="top_block-2">
+                    <input type="checkbox" name="question2" value="2" />
+                    <p class="check_par">Специальные</p>
+                  </div>
+                </div>
+                <div class="mid_blocks">
+                  <div class="mid_block-1">
+                    <input type="checkbox" name="question2" value="3" />
+                    <p class="check_par">Общедоступные</p>
+                  </div>
+                  <div class="mid_block-2">
+                    <input type="checkbox" name="question2" value="4" />
+                    <p class="check_par">Иные</p>
+                  </div>
+                </div>
+                <div class="bot_blocks" style="visibility: hidden;">
+                  <div class="bot_block-1">
+                    <input type="radio" name="question1" value="5" />
+                    <p class="check_par">Государственный орган</p>
+                  </div>
+                  <div class="bot_block-2">
+                    <input type="radio" name="question1" value="6" />
+                    <p class="check_par">Иностранный гражданин</p>
+                  </div>
+                </div>
+              
+                <div class="bot_fields">
+                  <div class="bot_left-field">Вопрос 2 из 4</div>
+                  <button class="next_btn" onclick="nextPage(2)">Далее</button>
+                </div>
+              </div>
+              <div class="quiz-page hidden" id="page-3">
+                <h1 style="text-align: center" class="header_info">
+                  Ответьте на 4 вопроса и получите стоимость разработки <br />
+                  пакета документов по персональным данным
+                </h1>
+                <p style="text-align: center" class="par_info">
+                  3. Персональные данные каких субъектов вы обрабатываете:
+                </p>
+                <div class="top_blocks">
+                  <div class="top_block-1">
+                    <input type="checkbox" name="question3" value="1" />
+                    <p class="check_par">Клиенты</p>
+                  </div>
+                  <div class="top_block-2">
+                    <input type="checkbox" name="question3" value="2" />
+                    <p class="check_par">Сотрудники</p>
+                  </div>
+                </div>
+                <div class="mid_blocks">
+                  <div class="mid_block-1">
+                    <input type="checkbox" name="question3" value="3" />
+                    <p class="check_par">Контрагенты</p>
+                  </div>
+                </div>
+                <div class="bot_blocks" style="visibility: hidden;">
+                  <div class="bot_block-1">
+                    <input type="radio" name="question1" value="5" />
+                    <p class="check_par">Государственный орган</p>
+                  </div>
+                  <div class="bot_block-2">
+                    <input type="radio" name="question1" value="6" />
+                    <p class="check_par">Иностранный гражданин</p>
+                  </div>
+                </div>
+                <div class="bot_fields">
+                  <div class="bot_left-field">Вопрос 3 из 4</div>
+                  <button class="next_btn" onclick="nextPage(3)">Далее</button>
+                </div>
+              </div>
+              <div class="quiz-page hidden" id="page-4">
+                <h1 style="text-align: center" class="header_info">
+                  Ответьте на 4 вопроса и получите стоимость разработки <br />
+                  пакета документов по персональным данным
+                </h1>
+                <p style="text-align: center" class="par_info">
+                  4. С каким объемом персональных данных вы работаете?:
+                </p>
+                <div class="top_blocks">
+                  <div class="top_block-1">
+                    <input type="radio" name="question4" value="1" />
+                    <p class="check_par">Менее 100 000</p>
+                  </div>
+                  <div class="top_block-2">
+                    <input type="radio" name="question4" value="2" />
+                    <p class="check_par">Более 100 000</p>
+                  </div>
+                </div>
+                <div class="mid_blocks" style="visibility: hidden">
+                  <div class="mid_block-1">
+                    <input type="radio" name="question3" value="3" />
+                    <p class="check_par">Контрагенты</p>
+                  </div>
+                </div>
+                <div class="bot_blocks" style="visibility: hidden">
+                  <div class="bot_block-1">
+                    <input type="radio" name="question1" value="5" />
+                    <p class="check_par">Государственный орган</p>
+                  </div>
+                  <div class="bot_block-2">
+                    <input type="radio" name="question1" value="6" />
+                    <p class="check_par">Иностранный гражданин</p>
+                  </div>
+                </div>
+                <div class="bot_fields">
+                  <div class="bot_left-field">Вопрос 4 из 4</div>
+                  <button class="next_btn" onclick="nextPage(4)">Далее</button>
+                </div>
+                
+              </div>
+              <div class="inputs_block hidden" id="page-5">
+                <h1 class="final_header">
+                  Оставьте ваши контактные данные и мы <br />
+                  рассчитаем стоимость пакета документов
+                </h1>
+                <div class="tel_block">
+                  <p class="final_par">Номер телефона</p>
+                  <input
+                    type="tel"
+                    class="inputs"
+                    placeholder="+7 xxx xx xx"
+                    id="phone"
+                  />
+                </div>
+                <div class="mail_block">
+                  <p class="final_par">E-mail</p>
+                  <input
+                    type="mail"
+                    class="inputs"
+                    placeholder="example@mail.ru"
+                    id="email"
+                  />
+                </div>
+                <p class="agree_block">Обязательно отметьте поля ниже*</p>
+                <div class="checkbox_block">
+                  <input type="checkbox" id="agree" class="check no-style" />
+                  <p class="agree_par">
+                    Нажимая кнопку "Cгенерировать текст сообщения", я соглашаюсь
+                    на обработку моих персональных данных в соотв. с ФЗ от
+                    27.07.2006 №152-ФЗ на условиях и для целей, определенных
+                    Политикой конфиденциальности. *
+                  </p>
+                </div>
+                <button class="price_btn">Рассчитать стоимость</button>
+              </div>
+              <!--Блок с контактными данными-->
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
