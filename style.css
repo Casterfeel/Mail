@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Muller';
-    src: url('/fonts/MullerMedium.woff') format('truetype');
+    src: url('./fonts/MullerMedium.woff') format('truetype');
 }
 
 @media(max-width: 320px) {
@@ -152,7 +152,7 @@
 
 body {
     font-family: 'Muller';
-    src: url('/fonts/MullerMedium.woff');
+    src: url('./fonts/MullerMedium.woff');
     height: 100%;
 }
 
