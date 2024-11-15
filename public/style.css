@@ -4,9 +4,6 @@
 }
 
 @media(max-width: 320px) {
-    .blocks {
-        margin-right: 25px;
-    }
     .entry_block {
         flex-direction: column;
         padding: 0 10px;
