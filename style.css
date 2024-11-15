@@ -5,64 +5,37 @@
 
 @media(max-width: 320px) {
     .entry_block {
-        max-width: 200px;
-        display: flex;
         flex-direction: column;
-        margin-left: 80px;
+        padding: 0 10px;
+        max-width: 100%;
+        margin: 0;
+        height: 500px; /* Устанавливаем фиксированную высоту */
     }
-    .entry_head {
-        text-align: center;
 
-    }
     .header_info {
-        line-height: 10px;
+        font-size: 16px;
     }
-    .par_info {
-        text-align: center;
-    }
-    .top_blocks {
-        display: flex;
-        flex-direction: column;
-    }
-    .top_blocks p {
-        text-align: left;
-    }
-    .mid_blocks p {
-        text-align: left;
-    }
-    .bot_blocks p {
-        text-align: left;
-    }
-    .bot_blocks {
-        display: flex;
-        flex-direction: column;
-    }
-    .mid_blocks {
-        display: flex;
-        flex-direction: column;
-    }
-    .top_block-1 {
-        max-width: 220px
-    }
-    .top_block-2 {
-        max-width: 220px
-    }
-    .bot_block-2 {
-        max-width: 220px
-    }
-    .mid_block-1 {
-        max-width: 220px
-    }
-    .mid_block-2 {
-        max-width: 220px
-    }
-    .bot_block-1 {
-        max-width: 220px
-    }
-    .final_header {
-        line-height: 26px !important;
-        font-size: 14px !important;
 
+    .top_blocks, .mid_blocks, .bot_blocks {
+        flex-direction: column;
+        height: auto; /* Если нужно, убираем фиксированную высоту для гибкости */
+    }
+
+    .top_block-1, .top_block-2, .mid_block-1, .mid_block-2, .bot_block-1, .bot_block-2 {
+        width: 100%;
+        max-width: 100%;
+        height: 80px; /* Устанавливаем фиксированную высоту для блоков */
+    }
+
+    .inputs_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200px; /* Фиксированная высота для блока с инпутами */
+    }
+
+    .final_header {
+        font-size: 18px;
     }
     .inputs {
         width: 120px !important;
@@ -78,77 +51,41 @@
         width: 160px !important;
     }
 }
+
 @media(max-width: 768px) {
     .entry_block {
-        max-width: 600px;
+        max-width: 100%;
+        margin-left: 0;
+        height: 600px; /* Устанавливаем фиксированную высоту для блока */
+    }
+
+    .header_info {
+        font-size: 18px;
+    }
+
+    .top_blocks, .mid_blocks, .bot_blocks {
+        flex-direction: column;
+        height: auto; /* Если нужно, убираем фиксированную высоту */
+    }
+
+    .top_block-1, .top_block-2, .mid_block-1, .mid_block-2, .bot_block-1, .bot_block-2 {
+        width: 100%;
+        max-width: 100%;
+        height: 100px; /* Фиксированная высота для блоков */
+    }
+
+    .inputs_block {
         display: flex;
         flex-direction: column;
-        margin-left: 160px;
-    }
-    .entry_head {
-        text-align: center;
-
-    }
-    .header_info {
-        
-        font-size: 16px !important;
-
-    }
-    .par_info {
-        text-align: center;
-
-    }
-    .blocks {
-        margin-left: 220px !important;
-    }
-    .top_blocks p {
-        text-align: left;
-    }
-    .mid_blocks p {
-        text-align: left;
-    }
-    .bot_blocks p {
-        text-align: left;
+        align-items: center;
+        height: 250px; /* Фиксированная высота для блока с инпутами */
     }
 
-    .top_block-1 {
-        max-width: 220px
-    }
-    .top_block-2 {
-        max-width: 220px
-    }
-    .bot_block-2 {
-        max-width: 220px
-    }
-    .mid_block-1 {
-        max-width: 220px
-    }
-    .mid_block-2 {
-        max-width: 220px
-    }
-    .bot_block-1 {
-        max-width: 220px
-    }
     .final_header {
-        line-height: 26px !important;
-        font-size: 14px !important;
-
-    }
-    .inputs {
-        width: 420px !important;
-        display: flex;
-    }
-    .agree_block {
-        margin-left: 60px;
-        line-height: 12px !important;
-    }
-    .checkbox_block {
-        max-width: 450px;
-    }
-    .price_btn {
-        width: 200px !important;
+        font-size: 20px;
     }
 }
+
 
 body {
     font-family: 'Muller';
