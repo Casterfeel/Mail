@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail', 
+    service: 'gmail',   
     auth: {
         user: 'mrcrimson123@gmail.com', 
         pass: 'ezai nojj bwwy gxxh',     
@@ -62,6 +62,6 @@ app.post('/send-email', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen( process.env.PORT || 3000, () => {
     console.log('Сервер запущен на http://localhost:3000');
 });
