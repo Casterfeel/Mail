@@ -1,25 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const nodemailer = require('nodemailer'); // Импортируем nodemailer для работы с SMTP
+const nodemailer = require('nodemailer'); 
 
 const app = express();
 
-// Используем middleware
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Настройка Gmail SMTP
+
 let transporter = nodemailer.createTransport({
-    service: 'gmail', // Используем Gmail для отправки
+    service: 'gmail', 
     auth: {
-        user: 'mrcrimson123@gmail.com', // Ваш email в Gmail
-        pass: 'ezai nojj bwwy gxxh',     // Пароль приложения, если включена двухфакторная аутентификация
+        user: 'mrcrimson123@gmail.com', 
+        pass: 'ezai nojj bwwy gxxh',     
     },
 });
 
-// Маршрут для отправки email
+
 app.post('/send-email', (req, res) => {
     const { question1, question2, question3, question4, phone, email } = req.body;
 
@@ -29,7 +29,7 @@ app.post('/send-email', (req, res) => {
 
     console.log('Полученные данные:', req.body);
 
-    // Формируем текст сообщения
+    
     const message = `
         1. ${question1}
         2. ${question2}
@@ -41,16 +41,16 @@ app.post('/send-email', (req, res) => {
         E-mail: ${email}
     `;
 
-    // Настроим параметры письма
+    
     const mailOptions = {
-        from: email, // Ваш email
-        to: 'sanikovmaxim@mail.ru',  // Почта, на которую будут отправляться данные
+        from: email, 
+        to: 'rom1@fedresurs.online',  
         subject: 'Ответы на квиз и контактные данные',
         text: message,
-        replyTo: email,  // Используем email, введенный пользователем
+        replyTo: email,  
     };
 
-    // Отправляем письмо
+    
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Ошибка при отправке email:', error);
@@ -61,7 +61,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-// Запуск сервера
+
 app.listen(3000, () => {
     console.log('Сервер запущен на http://localhost:3000');
 });

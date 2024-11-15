@@ -1,18 +1,18 @@
-// Функция для смены фонов в .row
+
 function changeBackground(pageNumber) {
-    const row = document.querySelector('.row'); // Получаем элемент с классом row
+    const row = document.querySelector('.row'); 
 
     if (row) {
-        // Очищаем фоны перед установкой нового
+        
         row.style.backgroundImage = "";
 
-        // Устанавливаем новые фоны в зависимости от страницы
-        if (pageNumber === 4) {  // Страница с контактами (page-4)
+        
+        if (pageNumber === 4) { 
             row.style.backgroundImage = "url('./images/calc1.png'), url('./images/calc2.png')";
             row.style.backgroundPosition = "left top, right bottom";
             row.style.backgroundRepeat = "no-repeat";
         } else {
-            // Включаем стандартный фон для других страниц
+            
             row.style.backgroundImage = "url('./images/left.png'), url('./images/top tight.png'), url('./images/bot right.png')";
             row.style.backgroundPosition = "left, top right, bottom right";
             row.style.backgroundRepeat = "no-repeat";
@@ -20,11 +20,11 @@ function changeBackground(pageNumber) {
     }
 }
 
-// Функция для проверки заполненности чекбоксов на текущей странице
-function checkCheckboxes(pageNumber) {
-    let isValid = true;  // Переменная для проверки валидности
 
-    // Проверка вопроса с чекбоксами для каждой страницы
+function checkCheckboxes(pageNumber) {
+    let isValid = true;  
+
+    
     if (pageNumber === 1 || pageNumber === 2 || pageNumber === 3 || pageNumber === 4) {
         const checkboxes = document.querySelectorAll(`input[name="question${pageNumber}"]:checked`);
         if (checkboxes.length === 0) {
@@ -36,39 +36,39 @@ function checkCheckboxes(pageNumber) {
     return isValid;
 }
 
-// Функция для перехода на следующий вопрос (страницу)
+
 function nextPage(page) {
-    // Сначала проверяем, что все чекбоксы выбраны для текущей страницы
+    
     if (!checkCheckboxes(page)) {
-        return;  // Если хотя бы один чекбокс не выбран, не переходим дальше
+        return;  
     }
 
     const currentPage = document.getElementById('page-' + page);
     const nextPage = document.getElementById('page-' + (page + 1));
     
-    // Прячем текущую страницу
+    
     currentPage.classList.add('hidden');
     
-    // Показываем следующую страницу
+    
     nextPage.classList.remove('hidden');
     
-    // Меняем фоновое изображение
+    
     changeBackground(page);
 }
 
-// Функция для отправки формы
+
 function submitForm() {
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
     const agree = document.getElementById('agree').checked;
 
-    // Проверка обязательных полей (телефон, email, согласие)
+    
     if (!phone || !email || !agree) {
         alert('Заполните все поля');
         return;
     }
 
-    // Проверка заполненности чекбоксов
+    
     const question1Checked = document.querySelectorAll('input[name="question1"]:checked').length > 0;
     const question2Checked = document.querySelectorAll('input[name="question2"]:checked').length > 0;
     const question3Checked = document.querySelectorAll('input[name="question3"]:checked').length > 0;
@@ -93,7 +93,7 @@ function submitForm() {
         email
     };
 
-    // Отправка данных на сервер
+    
     fetch('http://localhost:3000/send-email', {
         method: 'POST',
         headers: {
@@ -119,25 +119,25 @@ function submitForm() {
     });
 }
 
-// Добавление обработчика на кнопку "Подобрать"
+
 document.querySelector('.entry_btn').addEventListener('click', function() {
     const entryBlock = document.querySelector('.entry_block');
     const quizPage1 = document.getElementById('page-1');
     
-    // Прячем блок "Подобрать"
+    
     entryBlock.classList.add('hidden');
     
-    // Показываем первый вопрос квиза
+   
     quizPage1.classList.remove('hidden');
     
-    // Меняем фон
+    
     changeBackground(1);
 });
 
-// Добавление обработчика на кнопку "Рассчитать стоимость"
+
 document.querySelector('.price_btn').addEventListener('click', submitForm);
 
-// Проверка загрузки страницы и подключение скрипта
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("JavaScript файл подключен и выполнен");
 });
